@@ -7,6 +7,7 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -29,6 +30,8 @@ class AccelerometerActivity : AppCompatActivity(), SensorEventListener {
     private var currentAcceleration = 0f
     private var accelerometerIntensity = 0f
 
+    private lateinit var btnEndActivity: Button
+
     /**
      * Método que se ejecuta al crear la actividad
      * @param savedInstanceState Bundle con el estado de la actividad
@@ -39,6 +42,7 @@ class AccelerometerActivity : AppCompatActivity(), SensorEventListener {
 
         tvAccelValue = findViewById(R.id.tvAccelValue)
         tvAccelLevel = findViewById(R.id.tvAccelLevel)
+        btnEndActivity = findViewById<Button>(R.id.btnEndActivity)
 
         //Obtener el servicio de sensores del sistema y asignárselo a sensorManager
         sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
@@ -54,6 +58,10 @@ class AccelerometerActivity : AppCompatActivity(), SensorEventListener {
         //Por eso usamos el Gravity_Earth como valor default inicial
         currentAcceleration = SensorManager.GRAVITY_EARTH
         lastAcceleration = SensorManager.GRAVITY_EARTH
+
+        btnEndActivity.setOnClickListener {
+            finish()
+        }
     }
 
     /**
