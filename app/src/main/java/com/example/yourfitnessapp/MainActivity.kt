@@ -1,5 +1,6 @@
 package com.example.yourfitnessapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -9,10 +10,20 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.yourfitnessapp.model.ActivitySession
 import java.text.SimpleDateFormat
 
+/**
+ * Clase para la actividad principal
+ */
 class MainActivity : AppCompatActivity() {
 
+    /**
+     * Adapter para el RecyclerView
+     */
     private lateinit var adapter : ActivitySessionAdapter
 
+    /**
+     * Método que se ejecuta al crear la actividad
+     * @param savedInstanceState Bundle con el estado de la actividad
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -30,10 +41,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnRegisterActivity.setOnClickListener {
-            registerActivity()
+            val intent = Intent(this, AccelerometerActivity::class.java)
+            startActivity(intent)
         }
     }
 
+    /**
+     * Método que se ejecuta al pulsar el botón "Save Activity"
+     * Guarda la actividad en el adapter
+     */
     private fun saveActivity() {
         val etActivity = findViewById<EditText>(R.id.etActivity)
         val etDuration = findViewById<EditText>(R.id.etDuration)
@@ -65,10 +81,6 @@ class MainActivity : AppCompatActivity() {
             etDuration.text.clear()
             etType.text.clear()
         }
-
     }
 
-    private fun registerActivity() {
-        //TODO
-    }
 }
