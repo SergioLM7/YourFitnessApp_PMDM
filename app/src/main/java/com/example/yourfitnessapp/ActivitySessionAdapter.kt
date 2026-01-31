@@ -41,4 +41,10 @@ class ActivitySessionAdapter (private val items: MutableList<ActivitySession> = 
             items.addAll(newItems)
             notifyDataSetChanged()
         }
+
+        fun addItem(newItem: ActivitySession) {
+            items.add(newItem)
+            notifyItemInserted(items.size - 1)
+        }
+
 }
