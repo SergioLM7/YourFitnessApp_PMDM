@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="Your Activity App"
+        android:text="@string/app_name"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="You activity name"
+        android:hint="@string/main_activity_name_placeholder"
         android:inputType="text"
         android:padding="8sp"
     />
@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Duration (in minutes)"
+        android:hint="@string/main_activity_duration_placeholder"
         android:inputType="number"
         android:padding="8sp"
         />
@@ -46,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Type (running, yoga, cycling...)"
+        android:hint="@string/main_activity_type_placeholder"
         android:inputType="text"
         android:padding="8sp"
         />
@@ -64,14 +64,14 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:backgroundTint="@color/buttonColor"
-        android:text="Save Activity" />
+        android:text="@string/main_save_activity_button" />
 
     <Button
         android:id="@+id/btnRegisterActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/buttonColor"
-        android:text="Start Activity" />
+        android:text="@string/main_register_activity_button" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
