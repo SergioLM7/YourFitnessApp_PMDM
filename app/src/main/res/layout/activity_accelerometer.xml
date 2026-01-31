@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top"
+    android:background="@color/main"
+    android:fitsSystemWindows="true"
+    >
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+    <TextView
+        android:id="@+id/tvAccelTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_marginBottom="16dp"
+        android:textStyle="bold"
+        android:text="@string/accelerometer_activity_title" />
+
+    <TextView
+        android:id="@+id/tvAccelValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_marginBottom="16dp"
+        android:textStyle="bold"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tvAccelLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_corner_background"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btnEndActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/accelerometer_end_activity_button" />
+
+    </LinearLayout>
+</LinearLayout>
